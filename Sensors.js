@@ -21,7 +21,7 @@ util.inherits(Sensor, ee);
 
 Sensor.prototype._update = function(value) {
 	if (this._value != value) {
-		emit('change', value)
+		this.emit('change', value)
 	}
 	this._value = value;
 }
